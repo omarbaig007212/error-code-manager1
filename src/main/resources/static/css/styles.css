@@ -1,0 +1,73 @@
+/* General Styling */
+body {
+    background-color: #f5f5f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.card {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    margin-bottom: 1rem;
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+/* List Styling */
+.list-group-item {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.list-group-item:hover {
+    background-color: #f8f9fa;
+}
+
+.list-group-item.active {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+/* Table Styling */
+.table th {
+    background-color: #f8f9fa;
+    position: sticky;
+    top: 0;
+}
+
+.error-code-row {
+    cursor: pointer;
+}
+
+.error-code-row:hover {
+    background-color: rgba(13, 110, 253, 0.1) !important;
+}
+
+/* Footer */
+.footer {
+    position: relative;
+    margin-top: 3rem;
+}
+
+/* Badges */
+.severity-high, .severity-critical {
+    background-color: #dc3545;
+    color: white;
+}
+
+.severity-medium, .severity-warning {
+    background-color: #ffc107;
+    color: black;
+}
+
+.severity-low, .severity-info {
+    background-color: #0dcaf0;
+    color: black;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+}

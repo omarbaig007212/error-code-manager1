@@ -15,7 +15,7 @@ public class Version {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer versionId;
     
-    private String versionNumber;
+    private Integer versionNumber;
     
     @ManyToOne
     @JoinColumn(name = "product_id")

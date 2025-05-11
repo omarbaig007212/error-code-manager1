@@ -5,6 +5,6 @@ import lombok.Data;
 @Data
 public class VersionDTO {
     private Integer versionId;
-    private String versionNumber;
+    private Integer versionNumber;
     private Integer productId;
 } 

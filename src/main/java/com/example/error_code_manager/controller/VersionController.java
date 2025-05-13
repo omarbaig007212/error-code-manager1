@@ -1,5 +1,20 @@
 package com.example.error_code_manager.controller;
 
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
 import com.example.error_code_manager.dto.VersionDTO;
 import com.example.error_code_manager.entity.ErrorCode;
 import com.example.error_code_manager.entity.Product;
@@ -7,17 +22,11 @@ import com.example.error_code_manager.entity.Version;
 import com.example.error_code_manager.service.ErrorCodeService;
 import com.example.error_code_manager.service.ProductService;
 import com.example.error_code_manager.service.VersionService;
+
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
-import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/versions")
@@ -82,7 +91,7 @@ public class VersionController {
         
         // Convert DTO to entity
         Version version = new Version();
-        version.setVersionNumber(versionDTO.getVersionNumber());
+        version.setVersionNumber(versionDTO.getVersionNumber());  // Now accepts String
         version.setProduct(productOptional.get());
         
         Version createdVersion = versionService.createVersion(version);
@@ -113,7 +122,7 @@ public class VersionController {
         }
         
         Version existingVersion = existingVersionOptional.get();
-        existingVersion.setVersionNumber(versionDTO.getVersionNumber());
+        existingVersion.setVersionNumber(versionDTO.getVersionNumber());  // Now accepts String
         
         if (product != null) {
             existingVersion.setProduct(product);
@@ -130,7 +139,7 @@ public class VersionController {
         @ApiResponse(responseCode = "404", description = "Version or Error code not found")
     })
     public ResponseEntity<Version> addErrorCodeToVersion(@PathVariable Integer versionId, 
-                                                        @PathVariable Integer errorCodeId) {
+                                                        @PathVariable String errorCodeId) {
         Optional<Version> versionOptional = versionService.getVersionById(versionId);
         Optional<ErrorCode> errorCodeOptional = errorCodeService.getErrorCodeById(errorCodeId);
         
@@ -154,7 +163,7 @@ public class VersionController {
         @ApiResponse(responseCode = "404", description = "Version or Error code not found")
     })
     public ResponseEntity<Version> removeErrorCodeFromVersion(@PathVariable Integer versionId, 
-                                                            @PathVariable Integer errorCodeId) {
+                                                            @PathVariable String errorCodeId) {
         Optional<Version> versionOptional = versionService.getVersionById(versionId);
         Optional<ErrorCode> errorCodeOptional = errorCodeService.getErrorCodeById(errorCodeId);
         

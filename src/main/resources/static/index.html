@@ -506,7 +506,7 @@
                 const searchResults = document.querySelectorAll('#searchResultsList .error-code-row');
                 if (searchResults.length > 0) {
                     // Fetch the error code from the API
-                    fetch(`${API_URL}/errorCodes/${errorCodeId}`)
+                    fetch(`${API_URL}/errorCodes/findByErrorCodeId/${errorCodeId}`)
                         .then(response => response.json())
                         .then(data => {
                             displayErrorCodeDetails(data);
@@ -675,6 +675,9 @@
             const searchQuery = document.getElementById('searchQuery');
             
             switch (searchType) {
+                case 'errorCodeId':
+                    searchQuery.placeholder = "Enter exact Error Code ID";
+                    break;
                 case 'condition':
                     searchQuery.placeholder = "Enter condition ID (e.g. DRIVE-001)";
                     break;
@@ -702,16 +705,46 @@
             const callhomeFilter = document.getElementById('callhomeFilter').value;
             const versionFilter = document.getElementById('versionFilter').value;
             
-            if (!searchQuery && searchType !== 'all') {
-                showAlert('warning', 'Please enter a search query');
-                return;
-            }
+            // Show loading indicator in the results area
+            document.getElementById('searchResultsList').innerHTML = 
+                '<tr><td colspan="8" class="text-center">Searching...</td></tr>';
             
             try {
                 let response;
+                let errorCodes = [];
+                
+                // If a search query is provided in the All Error Codes mode,
+                // first try to find by exact errorCodeId
+                if (searchType === 'all' && searchQuery) {
+                    try {
+                        const directResponse = await fetch(`${API_URL}/errorCodes/findByErrorCodeId/${searchQuery}`);
+                        if (directResponse.ok) {
+                            const directResult = await directResponse.json();
+                            if (directResult) {
+                                // If we found an exact match, use it
+                                if (Array.isArray(directResult)) {
+                                    errorCodes = directResult;
+                                } else {
+                                    errorCodes = [directResult];
+                                }
+                                
+                                // Display results and return early
+                                displayErrorCodesTable(errorCodes, document.getElementById('searchResultsList'));
+                                showAlert('info', `Found ${errorCodes.length} error code(s) matching your search criteria`);
+                                return;
+                            }
+                        }
+                    } catch (directError) {
+                        console.log('Direct search failed, falling back to general search', directError);
+                        // If direct search fails, we'll continue with the general search
+                    }
+                }
                 
                 // Determine which endpoint to call based on search type
                 switch (searchType) {
+                    case 'errorCodeId':
+                        response = await fetch(`${API_URL}/errorCodes/findByErrorCodeId/${searchQuery}`);
+                        break;
                     case 'condition':
                         response = await fetch(`${API_URL}/errorCodes/byConditionId?conditionId=${searchQuery}`);
                         break;
@@ -737,12 +770,17 @@
                     throw new Error('Search request failed');
                 }
                 
-                let errorCodes = await response.json();
+                errorCodes = await response.json();
                 
-                // Apply additional filters if using the 'all' endpoint
-                if (searchType === 'all' || searchType === 'severity') {
+                // For the exact error code ID search, we may get a single object instead of an array
+                if (searchType === 'errorCodeId' && !Array.isArray(errorCodes)) {
+                    errorCodes = [errorCodes];
+                }
+                
+                // Apply additional filters if using the 'all' endpoint or severity filter
+                if ((searchType === 'all' || searchType === 'severity') && errorCodes.length > 0) {
                     // Filter by free text if provided
-                    if (searchQuery) {
+                    if (searchQuery && searchType === 'all') {
                         const lowerQuery = searchQuery.toLowerCase();
                         errorCodes = errorCodes.filter(code => 
                             code.errorCodeId.toString().includes(lowerQuery) ||
@@ -786,7 +824,7 @@
                 showAlert('danger', 'An error occurred during the search');
             }
         }
-
+        
         function clearSearch() {
             document.getElementById('searchQuery').value = '';
             document.getElementById('severityFilter').value = '';

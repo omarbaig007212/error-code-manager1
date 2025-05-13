@@ -1,11 +1,12 @@
 package com.example.error_code_manager.service;
 
-import com.example.error_code_manager.entity.ErrorCode;
-import com.example.error_code_manager.repository.ErrorCodeRepository;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
+
+import org.springframework.stereotype.Service;
+
+import com.example.error_code_manager.entity.ErrorCode;
+import com.example.error_code_manager.repository.ErrorCodeRepository;
 
 @Service
 public class ErrorCodeService {
@@ -19,8 +20,22 @@ public class ErrorCodeService {
         return errorCodeRepository.findAll();
     }
 
-    public Optional<ErrorCode> getErrorCodeById(Integer errorCodeId) {
-        return errorCodeRepository.findById(errorCodeId);
+    public Optional<ErrorCode> getErrorCodeById(String id) {
+        // Try finding by internal id first, then by errorCodeId
+        try {
+            Integer intId = Integer.parseInt(id);
+            Optional<ErrorCode> byId = errorCodeRepository.findById(intId);
+            if (byId.isPresent()) {
+                return byId;
+            }
+        } catch (NumberFormatException e) {
+            // If id is not a number, try finding by errorCodeId
+        }
+        return errorCodeRepository.findByErrorCodeId(id);
+    }
+
+    public List<ErrorCode> getAllByErrorCodeId(String errorCodeId) {
+        return errorCodeRepository.findAllByErrorCodeId(errorCodeId);
     }
 
     public List<ErrorCode> getErrorCodesByConditionId(String conditionId) {
@@ -31,24 +46,28 @@ public class ErrorCodeService {
         return errorCodeRepository.findByComponent(component);
     }
 
-    public List<ErrorCode> getErrorCodesById(String idValue) {
-        return errorCodeRepository.findByIdValue(idValue);
-    }
+    // Comment out or remove this method
+    // public List<ErrorCode> getErrorCodesById(String idValue) {
+    //     return errorCodeRepository.findByIdValue(idValue);
+    // }
 
     public List<ErrorCode> getErrorCodesByVersionId(Integer versionId) {
         return errorCodeRepository.findByVersionsVersionId(versionId);
     }
 
-    public void deleteErrorCode(Integer errorCodeId) {
-        errorCodeRepository.deleteById(errorCodeId);
+    public void deleteErrorCode(String id) {
+        try {
+            Integer intId = Integer.parseInt(id);
+            errorCodeRepository.deleteById(intId);
+        } catch (NumberFormatException e) {
+            // Handle the case where id is not a number
+            Optional<ErrorCode> errorCode = errorCodeRepository.findByErrorCodeId(id);
+            errorCode.ifPresent(ec -> errorCodeRepository.deleteById(ec.getId()));
+        }
     }
 
     public ErrorCode createErrorCode(ErrorCode errorCode) {
-        if (errorCode.getErrorCodeId() != null && 
-            errorCodeRepository.existsById(errorCode.getErrorCodeId())) {
-            throw new IllegalArgumentException("Error code with ID " + 
-                errorCode.getErrorCodeId() + " already exists");
-        }
+        // Remove the uniqueness check to allow duplicate entries
         return errorCodeRepository.save(errorCode);
     }
 }

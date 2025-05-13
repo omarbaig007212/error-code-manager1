@@ -4,10 +4,11 @@ import lombok.Data;
 
 @Data
 public class ErrorCodeDTO {
-    private Integer errorCodeId;
+    private Integer id;  // Internal unique identifier
+    private String errorCodeId;  // Business identifier (can have duplicates)
     private String conditionId;
     private String component;
-    private String idValue;
+    // private String idValue;  // Commented out as errorCodeId is used instead
     private String severity;
     private String callhome;
     private String alertName;

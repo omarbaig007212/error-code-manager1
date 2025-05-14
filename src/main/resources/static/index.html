@@ -129,7 +129,7 @@
                             <div class="d-flex justify-content-between align-items-center">
                                 <h5 class="mb-0">Error Codes <i class="bi bi-chevron-down"></i></h5>
                                 <div class="input-group w-25">
-                                    <input type="text" id="filter-input" class="form-control" placeholder="Filter error codes...">
+                                    <input type="text" id="filter-input" class="form-control" placeholder="Enter error codes to Filter">
                                     <button id="filter-button" class="btn btn-outline-secondary">Filter</button>
                                 </div>
                             </div>
@@ -188,9 +188,6 @@
                                 <option value="all">All Error Codes</option>
                                 <option value="condition">By Condition ID</option>
                                 <option value="component">By Component</option>
-                                <option value="id">By ID Value</option>
-                                <option value="version">By Version</option>
-                                <option value="severity">By Severity</option>
                             </select>
                         </div>
                     </div>
@@ -219,8 +216,8 @@
                             <label for="callhomeFilter" class="form-label">Filter by Call Home:</label>
                             <select class="form-select" id="callhomeFilter">
                                 <option value="">All</option>
-                                <option value="YES">YES</option>
-                                <option value="NO">NO</option>
+                                <option value="True">True</option>
+                                <option value="False">False</option>
                             </select>
                         </div>
                     </div>
@@ -890,7 +887,6 @@
                             code.errorCodeId.toString().includes(lowerQuery) ||
                             (code.conditionId && code.conditionId.toLowerCase().includes(lowerQuery)) ||
                             (code.component && code.component.toLowerCase().includes(lowerQuery)) ||
-                            (code.idValue && code.idValue.toLowerCase().includes(lowerQuery)) ||
                             (code.alertName && code.alertName.toLowerCase().includes(lowerQuery)) ||
                             (code.description && code.description.toLowerCase().includes(lowerQuery)) ||
                             (code.severity && code.severity.toLowerCase().includes(lowerQuery))

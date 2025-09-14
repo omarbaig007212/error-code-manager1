@@ -4,25 +4,26 @@ echo "Starting data population for Error Code Management System..."
 
 # Create Product
 # echo "Creating product MetroNode..."
-# curl -X POST http://localhost:8080/api/products -H "Content-Type: application/json" -d '{"name":"MetroNode9.0"}'
+# curl -s -X POST http://localhost:8080/api/products -H "Content-Type: application/json" -d '{"name":"MetroNode"}' > /dev/null
 
 # Create Version
 echo "Creating version versionOne for MetroNode (Product ID: 1)..."
-curl -X POST http://localhost:8080/api/versions -H "Content-Type: application/json" -d '{"versionNumber":"9.0EventsandAlerts","productId":1}'
+curl -s -X POST http://localhost:8080/api/versions -H "Content-Type: application/json" -d '{"versionNumber":"9.0EventsAndAlerts","productId":1}' > /dev/null
 
 # Read and Process JSON File
 JSON_FILE="9.0Events&Alerts.json"
 BASE_URL="http://localhost:8080/api/errorCodes"
+VERSION_ID=2
 
 echo "Parsing Error Codes from JSON file and creating them in the system..."
 
+count=0
+
 jq -c '.[] | select(. != null)' "$JSON_FILE" | while read -r errorCode; do
-  
   # Extract fields dynamically for payload
   errorCodeId=$(echo "$errorCode" | jq -r '.["ID"] // empty')
   conditionId=$(echo "$errorCode" | jq -r '.["Condition ID"] // empty')
   component=$(echo "$errorCode" | jq -r '.["Component"] // empty')
-  idValue=$(echo "$errorCode" | jq -r '.["ID"] // empty')
   severity=$(echo "$errorCode" | jq -r '.["Severity"] // empty')
   callhome=$(echo "$errorCode" | jq -r '.["Call home"] | if . == "True" or . == true then "YES" else "NO" end')
   alertName=$(echo "$errorCode" | jq -r '.["Alert name"] // empty')
@@ -37,7 +38,6 @@ jq -c '.[] | select(. != null)' "$JSON_FILE" | while read -r errorCode; do
      --arg errorCodeId "$errorCodeId" \
      --arg conditionId "$conditionId" \
      --arg component "$component" \
-     --arg idValue "$idValue" \
      --arg severity "$severity" \
      --arg callhome "$callhome" \
      --arg alertName "$alertName" \
@@ -50,7 +50,6 @@ jq -c '.[] | select(. != null)' "$JSON_FILE" | while read -r errorCode; do
         errorCodeId: $errorCodeId,
         conditionId: $conditionId,
         component: $component,
-        idValue: $idValue,
         severity: $severity,
         callhome: $callhome,
         alertName: $alertName,
@@ -64,12 +63,20 @@ jq -c '.[] | select(. != null)' "$JSON_FILE" | while read -r errorCode; do
 
   # Create the Error Code
   echo "Creating Error Code with ID: $errorCodeId..."
-  curl -X POST "$BASE_URL" -H "Content-Type: application/json" -d "$payload"
+  response=$(curl -s -w "%{http_code}" -o /tmp/errcode_resp.json -X POST "$BASE_URL" -H "Content-Type: application/json" -d "$payload")
+  if [ "$response" -eq 200 ] || [ "$response" -eq 201 ]; then
+    count=$((count+1))
+  else
+    echo "Failed to create Error Code $errorCodeId (HTTP $response):"
+    cat /tmp/errcode_resp.json
+    continue
+  fi
 
-  # Associate the error code with versionOne (Version ID: 1)
-  echo "Associating Error Code $errorCodeId with Version versionOne (ID 1)..."
-  curl -X POST "http://localhost:8080/api/versions/2/errorCodes/$errorCodeId"
+  # Associate the error code with the version
+  echo "Associating Error Code $errorCodeId with Version versionOne (ID $VERSION_ID)..."
+  curl -s -X POST "http://localhost:8080/api/versions/$VERSION_ID/errorCodes/$errorCodeId" > /dev/null
 
 done
 
 echo "Data population completed."
+echo "Total error codes ingested: $count"

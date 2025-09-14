@@ -3,7 +3,6 @@ package com.example.error_code_manager.controller;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -32,7 +31,6 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 public class ErrorCodeController {
     private final ErrorCodeService errorCodeService;
 
-    @Autowired
     public ErrorCodeController(ErrorCodeService errorCodeService) {
         this.errorCodeService = errorCodeService;
     }

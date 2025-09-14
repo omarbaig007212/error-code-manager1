@@ -1,11 +1,12 @@
 package com.example.error_code_manager.repository;
 
-import com.example.error_code_manager.entity.Product;
-import com.example.error_code_manager.entity.Version;
+import java.util.List;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
+import com.example.error_code_manager.entity.Product;
+import com.example.error_code_manager.entity.Version;
 
 @Repository
 public interface VersionRepository extends JpaRepository<Version, Integer> {

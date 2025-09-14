@@ -3,7 +3,6 @@ package com.example.error_code_manager.controller;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -36,7 +35,6 @@ public class VersionController {
     private final ProductService productService;
     private final ErrorCodeService errorCodeService;
 
-    @Autowired
     public VersionController(VersionService versionService, ProductService productService, ErrorCodeService errorCodeService) {
         this.versionService = versionService;
         this.productService = productService;

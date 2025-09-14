@@ -1,73 +1,77 @@
-/* General Styling */
 body {
-    background-color: #f5f5f5;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.card {
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-    margin-bottom: 1rem;
-}
-
-.card-header {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-}
-
-/* List Styling */
-.list-group-item {
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-}
-
-.list-group-item:hover {
+    padding: 20px;
     background-color: #f8f9fa;
 }
-
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card-header {
+    background-color: #f1f7ff;
+    font-weight: 500;
+}
 .list-group-item.active {
     background-color: #0d6efd;
     border-color: #0d6efd;
 }
-
-/* Table Styling */
-.table th {
-    background-color: #f8f9fa;
-    position: sticky;
-    top: 0;
-}
-
 .error-code-row {
     cursor: pointer;
 }
-
 .error-code-row:hover {
-    background-color: rgba(13, 110, 253, 0.1) !important;
+    background-color: #f1f7ff;
 }
-
-/* Footer */
-.footer {
-    position: relative;
-    margin-top: 3rem;
-}
-
-/* Badges */
-.severity-high, .severity-critical {
+.severity-critical {
     background-color: #dc3545;
-    color: white;
+    color: #fff;
 }
-
-.severity-medium, .severity-warning {
+.severity-error {
+    background-color: #1a0202;  /* Black background for Error */
+    color: #ffffff;  /* White text for Error */
+}
+.severity-warning {
     background-color: #ffc107;
-    color: black;
+    color: #212529;
 }
-
-.severity-low, .severity-info {
-    background-color: #0dcaf0;
-    color: black;
+.severity-info {
+    background-color: #0d6efd;  /* Blue background for Info */
+    color: #ffffff;  /* White text for Info */
 }
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .container {
-        max-width: 100%;
-    }
+.search-box {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.advanced-search-toggle {
+    cursor: pointer;
+    color: #0d6efd;
+    margin-top: 10px;
+}
+#searchResults {
+    max-height: 500px;
+    overflow-y: auto;
+}
+.sticky-header th {
+    position: sticky;
+    top: 0;
+    background-color: #f8f9fa;
+    z-index: 1;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.1);
+}
+.error-codes-collapse {
+    cursor: pointer;
+}
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.pagination-info {
+    margin: 0 1rem;
+    line-height: 2.5;
+}
+.table-container {
+    max-height: 500px;
+    overflow-y: auto;
 }

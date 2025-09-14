@@ -3,17 +3,17 @@
 echo "Starting data population for Error Code Management System..."
 
 # Create Product
-echo "Creating product MetroNode..."
-curl -s -X POST http://localhost:8080/api/products -H "Content-Type: application/json" -d '{"name":"MetroNode"}' > /dev/null
+# echo "Creating product MetroNode..."
+# curl -s -X POST http://localhost:8080/api/products -H "Content-Type: application/json" -d '{"name":"MetroNode"}' > /dev/null
 
 # Create Version
 echo "Creating version versionOne for MetroNode (Product ID: 1)..."
-curl -s -X POST http://localhost:8080/api/versions -H "Content-Type: application/json" -d '{"versionNumber":"8.0EventsAndAlerts","productId":1}' > /dev/null
+curl -s -X POST http://localhost:8080/api/versions -H "Content-Type: application/json" -d '{"versionNumber":"7.0EventsAndAlerts","productId":1}' > /dev/null
 
 # Read and Process JSON File
-JSON_FILE="8.0Events&Alerts.json"
+JSON_FILE="7.0EventsandAlerts.json"
 BASE_URL="http://localhost:8080/api/errorCodes"
-VERSION_ID=1
+VERSION_ID=4
 
 echo "Parsing Error Codes from JSON file and creating them in the system..."
 
@@ -33,11 +33,6 @@ jq -c '.[] | select(. != null)' "$JSON_FILE" | while read -r errorCode; do
   eventSource=$(echo "$errorCode" | jq -r '.["Event source"] // empty')
   alertType=$(echo "$errorCode" | jq -r '.["Alert type"] // empty')
 
-  echo "++++++++++++++++++++"
-  echo $alertType
-  echo $correctiveAction
-  echo $rca
-  echo "++++++++++++++++++++"
   # Prepare the JSON payload
   payload=$(jq -n \
      --arg errorCodeId "$errorCodeId" \

@@ -1,3 +1,9 @@
+jq 'map(
+      if has("ID") then .ID |= gsub(" ";"") else . end
+      | if has("Condition ID") then ."Condition ID" |= gsub(" ";"") else . end
+      | if has("Component") then .Component |= gsub(" ";"") else . end
+    )' "7.0SP1EventsandAlerts.json" > "7.0Events&Alerts_clean.json"
+
 # Error Code Manager
 
 A Spring Boot application for managing product error codes, versions, and products with a modern Bootstrap frontend and REST API.  

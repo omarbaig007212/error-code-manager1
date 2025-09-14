@@ -4,6 +4,8 @@ jq 'map(
       | if has("Component") then .Component |= gsub(" ";"") else . end
     )' "7.0SP1EventsandAlerts.json" > "7.0Events&Alerts_clean.json"
 
+jq 'to_entries | map(.value + {ID: ((.key+1)|tostring)})' 7.0EventsandAlerts.json > 7.0EventsandAlerts_Clean.json 
+
 # Error Code Manager
 
 A Spring Boot application for managing product error codes, versions, and products with a modern Bootstrap frontend and REST API.  

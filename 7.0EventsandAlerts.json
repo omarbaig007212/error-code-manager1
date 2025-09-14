@@ -8,7 +8,8 @@
     "RCA": "Either a memory leakhasoccurred orthe metronode hasexceeded itsconfiguration limits.",
     "Corrective action": "Contact Dell Customer Support. ",
     "Event source": "DIRECTOR",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-1"
   },
   {
     "Condition ID": "v70-0x100002",
@@ -19,7 +20,8 @@
     "RCA": "An update to aninternalenvironmentfile failed.",
     "Corrective action": "Contact Dell Customer Support. ",
     "Event source": "DIRECTOR",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-2"
   },
   {
     "Condition ID": "v70-0x10001",
@@ -29,7 +31,8 @@
     "Description": "TEST: It is an example director scope alarm message. ",
     "RCA": "It is an exampleRCA for thedirector-scope testalarm.",
     "Corrective action": "It is an example external remedy for the director- scope test alarm. ",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-3"
   },
   {
     "Condition ID": "v70-0x10006",
@@ -39,7 +42,8 @@
     "Description": "TEST: It is an example director scope alarm message. ",
     "RCA": "It is an exampleRCA for thedirector-scopeoperationaltest event.",
     "Corrective action": "It is an example external remedy for the director- scope operational test event. ",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-4"
   },
   {
     "Condition ID": "v70-0x110001",
@@ -50,7 +54,8 @@
     "RCA": "Link went down on aport.Dependingon the portrole, aphysicalpath to localor remotecluster hasbeen lost.",
     "Corrective action": "Link went down on a        port.        Depending        on the port        role, a        physical        path to the        local or        remote        cluster has        been lost.        Perform the        following        steps: 1.        Check the        state of the        port, and        ensure that it is enabled.2. Check the cable and the SFP, and ensure they are properly plugged in.3. Check the switch if applicable, and ensure it is operational and the correspondi ng port is enabled. 4. If the link remains down, contact Dell Customer Support.",
     "Event source": "IPPORT",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-5"
   },
   {
     "Condition ID": "v70-0x20001",
@@ -61,7 +66,8 @@
     "RCA": "Storage Array is not reachable through this director.",
     "Corrective action": "Check for faulty hardware: verify the health of the cables, backend switches, and array. Contact Dell Customer Support if the problem persists.",
     "Event source": "ARRAY",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-6"
   },
   {
     "Condition ID": "v70-0x20002",
@@ -72,7 +78,8 @@
     "RCA": "The Initiator- Target connectionis failing and is out of service.Once the reliability improves the metro node automaticall y resumes using it.",
     "Corrective action": "Check for faulty hardware: verify the health of the cables, backend switches, and array. Contact Dell Customer Support if the problem persists.",
     "Event source": "ITNEXUS",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-7"
   },
   {
     "Condition ID": "v70-0x20003",
@@ -82,7 +89,8 @@
     "RCA": "The storage array is not accessible from all directors in the cluster.",
     "Corrective action": "Check for faulty hardware: verify the health of the cables, backend switches, and array. Contact Dell Customer Support if the problem persists.",
     "Event source": "ARRAY",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-8"
   },
   {
     "Condition ID": "v70-0x20004",
@@ -93,7 +101,8 @@
     "RCA": "The array hasreturned the SCSI BUSYstatus to metro node I/O requests for thisstorage- volume more often than what is considered acceptable.",
     "Corrective action": "The cause of busy condition on the storage array should be investigated. Investigate the health of the storage array, backend fabric. and metro node backend port to determine the source of the issue. Contact Dell Customer Support if there are performanc e problems.",
     "Event source": "LOGICALUN IT",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-9"
   },
   {
     "Condition ID": "v70-0x20005",
@@ -104,7 +113,8 @@
     "RCA": "An inconsistent ALUAsupport level has been detected for a logical unit.",
     "Corrective action": "Check the ALUAconfiguratio n on the array. All paths to a logical unit should be configured with the same failover mode.",
     "Event source": "LOGICALUN IT",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-10"
   },
   {
     "Condition ID": "v70-0x20006",
@@ -115,7 +125,8 @@
     "RCA": "A logical unit has inconsistent path types. Exhausted attempts to correct it through refresh and have banished the unit.",
     "Corrective action": "Engage the array vendor or Dell Customer Support to investigate why the logical unit has inconsistent path types.",
     "Event source": "LOGICALUN IT",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-11"
   },
   {
     "Condition ID": "v70-0x20007",
@@ -126,7 +137,8 @@
     "RCA": "Target device advertised a behavior which is not supported by the metro node initiator.",
     "Corrective action": "Switch the target device into a supported mode following metro node best practices for this device, do not use this target device, or the device may be less highly available than is recommend ed for normal operation.",
     "Event source": "ARRAY",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-12"
   },
   {
     "Condition ID": "v70-0x20008",
@@ -137,7 +149,8 @@
     "RCA": "Logical Unit already has maximum controllers allowed on this array. Extra controller is being attempted to be added.",
     "Corrective action": "Check Array configuration. If problem persists, contact Dell Customer Support.",
     "Event source": "ARRAY",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-13"
   },
   {
     "Condition ID": "v70-0x20009",
@@ -148,7 +161,8 @@
     "RCA": "A backend storage array Logical Unit has reported an unexpected peripheral qualifier.",
     "Corrective action": "Contact Dell Customer Support.",
     "Event source": "LOGICALUN IT",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-14"
   },
   {
     "Condition ID": "v70-0x2000a",
@@ -159,7 +173,8 @@
     "RCA": "The storage array reported an unexpected serial number.",
     "Corrective action": "Before using this array, check the storage- arrays context to ensure that multiple entries do not havethe same identifier, and that this array does not present multiple identifiers. If either of these conditions occur, do not use this array. The array name and version number should be reported to Dell Customer support.Continuing to use the array could lead to Data Unavailabilit y and Data Loss conditions and unreliable array behavior.",
     "Event source": "ARRAY",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-15"
   },
   {
     "Condition ID": "v70-0x2000b",
@@ -170,7 +185,8 @@
     "RCA": "LU mapping on the storage array had changed.Depending on the state of the system (host IOs running or not), either Data Unavailable, Data Loss or Data Corruption might have already happened or might happen in future.",
     "Corrective action": "The system automaticall y runs a refresh to destroy the stale ITL to the old LUID and re- discover the ITL to the new LUID. Always follow the 'Remove Disk or Array' procedure in the metro node SolVe Desktop when de- provisioning storage- volumes and/or re- provisioning storage- volumes to metro node to ensure an 'array re- discover' is run in between changes in order to prevent LUNswapping from occurring.",
     "Event source": "ITLNEXUS",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-16"
   },
   {
     "Condition ID": "v70-0x2000c",
@@ -181,7 +197,8 @@
     "RCA": "It is likely indicative of severely degraded hardware and/or fabric condition. Restore connectivity to the array controllers for all directors.",
     "Corrective action": "Check the backend switches, and engage the array vendor to investigate why the failover to the array controller could not succeed.Contact Dell Customer Support if problem persists.",
     "Event source": "ARRAY",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-17"
   },
   {
     "Condition ID": "v70-0x2000d",
@@ -192,7 +209,8 @@
     "RCA": "The logical unit is reserved through another initiator.",
     "Corrective action": "Contact your storage- administrato r to remove the reservation of the logical unit from either the one or more initiators or storage array.",
     "Event source": "LOGICALUN IT",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-18"
   },
   {
     "Condition ID": "v70-0x2000e",
@@ -203,7 +221,8 @@
     "RCA": "Metro node received deferred error from the specified target which indicates exception condition occurred on the target during processing of some previous command for which status was already returned. It can lead to Data Unavailabilit y/Data Loss.",
     "Corrective action": "Determine which back- end storage array the target corresponds to, and then engage the storage array Customer Support of vendor to determine the cause of the deferred error and to correct the exception condition on the target.",
     "Event source": "TARGET",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-19"
   },
   {
     "Condition ID": "v70-0x30003",
@@ -214,7 +233,8 @@
     "RCA": "One or more factors have contributed to changing the redundancy of the given virtual volume.",
     "Corrective action": "Contact Dell Customer Support for assistance with restoring the redundancy of the virtual volume.",
     "Event source": "VIRTUALVO LUME",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-20"
   },
   {
     "Condition ID": "v70-0x30004",
@@ -225,7 +245,8 @@
     "RCA": "A storage volume attached to the system can no longer service I/O.",
     "Corrective action": "If the storage volume is unreachable, see Troubleshoo ting_Unreac hable_Stora ge_Volumes.",
     "Event source": "STORAGEV OLUME",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-21"
   },
   {
     "Condition ID": "v70-0x30005",
@@ -236,7 +257,8 @@
     "RCA": "One or more factors have contributed to changing the redundancy of the given system device.",
     "Corrective action": "Contact Dell Customer Support for assistance with restoring the redundancy of the system device.",
     "Event source": "METAVOLU ME",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-22"
   },
   {
     "Condition ID": "v70-0x30006",
@@ -247,7 +269,8 @@
     "RCA": "Asuspension of I/O applied to a virtual volume has lasted longer than a preconfigur ed threshold.",
     "Corrective action": "Contact Dell Customer Support for analysis of the factors contributing to the extended suspension.",
     "Event source": "VIRTUALVO LUME",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-23"
   },
   {
     "Condition ID": "v70-0x30009",
@@ -258,7 +281,8 @@
     "RCA": "The system has lost access to the logging- volume device on which it is maintaining a list of changes to the reported distributed device. The specified mirror ofthe distributed device is marked out of date and rebuilt when possible.",
     "Corrective action": "Check the accessibility of the logging- volume component and check the accessibility of the underlying storage- volume of the mirror that is marked out of date. If necessary, to reconnect the inaccessible storage- volumes, take corrective actions.Contact Dell Customer Support for assistance.",
     "Event source": "LOGGINGV OLUME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-24"
   },
   {
     "Condition ID": "v70-0x3000a",
@@ -269,7 +293,8 @@
     "RCA": "All the mirrors of the specified distributed device had been marked out of date. In order to restore access to the device, and to minimize data loss, the specified mirror was marked as up to date.",
     "Corrective action": "Contact Dell Customer Support.",
     "Event source": "VIRTUALVO LUME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-25"
   },
   {
     "Condition ID": "v70-0x3000b",
@@ -280,7 +305,8 @@
     "RCA": "Two discovered devices reported the same device name. It can occur if configuratio n changes are made when one or more storage volumes are unreachable , if storage devices  from separate metro node systems with existing devices are merged into one metro nodesystem or if a device becomes visible to both clusters and happens to have the same name as a cluster- local device on the other cluster.",
     "Corrective action": "Manual intervention is required. Contact Dell Customer Support to resolve the conflict.",
     "Event source": "DEVICE",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-26"
   },
   {
     "Condition ID": "v70-0x3000c",
@@ -291,7 +317,8 @@
     "RCA": "Two discovered virtual volumes reported the same name. It can occur if configuratio n changes are made when one or more storage volumes are unreachable, if storage devices  from separate metro node systems with existing devices are merged into one metro nodesystem or if a virtual volume becomes visible to both clusters and happens to have the same name as a cluster- local virtual volume on the other cluster.",
     "Corrective action": "Manual intervention is required. Contact Dell Customer Support to resolve the conflict.",
     "Event source": "VIRTUALVO LUME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-27"
   },
   {
     "Condition ID": "v70-0x3000d",
@@ -302,7 +329,8 @@
     "RCA": "The automatic detach of the given cluster from the given device was disallowed, in order to preserve consistency on the device and avoid losing data.",
     "Corrective action": "To resume I/O, all WAN links should be brought online.",
     "Event source": "VIRTUALVO LUME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-28"
   },
   {
     "Condition ID": "v70-0x3000e",
@@ -313,7 +341,8 @@
     "RCA": "A storage volume has been provisioned to this cluster, even though the storage volume logically belongs to the other cluster. This message likely indicates a back-end zoning or masking problem, because a storage volume should be provisioned to only one cluster.",
     "Corrective action": "Reconfigure the zoning and/or masking on the back- end so that each cluster can see only its local storage volumes.Run the 'array re- discover' command to remove the remote storage volumes.",
     "Event source": "STORAGEV OLUME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-29"
   },
   {
     "Condition ID": "v70-0x3000f",
@@ -324,7 +353,8 @@
     "RCA": "The same storage volume has been not only presented to both clusters, but claimed at both clusters as well. If more than one cluster is doing I/O to the storage volume,  data corruption is likely.",
     "Corrective action": "1. Choose one cluster at which the storage volume should be used. 2. Tear down all configuratio ns involving the storage volume at the other cluster. 3. Remove visibility to the storage volume from the other cluster.",
     "Event source": "STORAGEV OLUME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-30"
   },
   {
     "Condition ID": "v70-0x30010",
@@ -335,7 +365,8 @@
     "RCA": "A write to a RAID 1device is successful to some mirrors, tat mirror is being marked as fully out of date, so that a subsequent rebuild can bring the mirror back up to date.",
     "Corrective action": "If the mirror is not still showing as out of date, it has likely auto corrected. If it is still marked out of date, investigate the back- end issues. Once those issues are resolved, the rebuild initiates automatically. It can take time depending on the number of active rebuilds on the system at the time. Contact Dell Customer Support if the condition persists.",
     "Event source": "METAVOLU ME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-31"
   },
   {
     "Condition ID": "v70-0x30011",
@@ -346,7 +377,8 @@
     "RCA": "A write to the  specified metadata volume is failed. The changes are preserved in memory, but if the entire cluster fails or is shut down before the access to the metadata volume is restored and the changes can be written successfully to disk, the changes are lost. The system configuratio n information that is associated with those metadata write not written to the disk may be lost.",
     "Corrective action": "1. Fix the unhealthy or failed metadata volume, or underlying storage volumes through checking fabric connectivity and one or more storage arrays. 2. If the metadata volume cannot be restored to 'ok' state, create and move to a new metadata volume as soon as possible.",
     "Event source": "METAVOLU ME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-32"
   },
   {
     "Condition ID": "v70-0x30012",
@@ -357,7 +389,8 @@
     "RCA": "The metadata volume is running out of available space. This event does not indicate an immediate metadata volume failure.",
     "Corrective action": "See the troubleshoo ting entry for the issue in the Generator.",
     "Event source": "METAVOLU ME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-33"
   },
   {
     "Condition ID": "v70-0x30013",
@@ -368,7 +401,8 @@
     "RCA": "To prevent event flooding, generation of I/O latency events has been stopped after emitting the maximum allowed number of events.",
     "Corrective action": "1. Use the metro node Unisphere performanc e monitoring stats to verify if there is still high average I/O latency on the backend. 2. Create storage- volume performanc e monitors in Vplexcli  to investigate individual storage- volume latency stats as needed to further investigate the cause of the performanc e degradation.3. Compare the storage- volume latency  stats to the latency on the storage array for the one or more volumes in question. If the latency on the array is not as high investigate the fabrics between the storage array and metro node.4. If the issue persists and unable to determine the cause engage Dell Customer Service.",
     "Event source": "CLUSTER",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-34"
   },
   {
     "Condition ID": "v70-0x30014",
@@ -379,7 +413,8 @@
     "RCA": "A combination of failures involving metadata and disks offline at cluster followed by cluster partition and failed writes to a logging volume has led to temporary condition where the distributed device can no longer process I/O. Once this condition is resolved, a full rebuild occurs. This condition is necessary to avoid data corruption.",
     "Corrective action": "A full rebuild is started automaticall y once the clusters rejoin.Investigate why the clusters are partitioned and take any required actions to restore the WAN COMconnectivity so the clusters can rejoin.",
     "Event source": "DISTRIBUTE DDEVICE",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-35"
   },
   {
     "Condition ID": "v70-0x30015",
@@ -390,7 +425,8 @@
     "RCA": "Metro node has detected an inconsistenc y in the persisted information relating to the configuratio n of the given device or disk. It may indicate a problem with the persisted information, or may simply be the result of a timing issue upon cluster or system bring up.",
     "Corrective action": "Contact Dell Customer Support for analysis and remedy of the problem.",
     "Event source": "DEVICE",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-36"
   },
   {
     "Condition ID": "v70-0x30016",
@@ -401,7 +437,8 @@
     "RCA": "The capacity of a virtual volume has shrunk below the capacity with which it was created.",
     "Corrective action": "1. Examine the back- end arrays to determine why the storage has shrunk. 2. Resize the required back-end devices to their original size. 3. Contact Dell Customer Support.",
     "Event source": "VIRTUALVO LUME",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-37"
   },
   {
     "Condition ID": "v70-0x30017",
@@ -412,7 +449,8 @@
     "RCA": "The capacity of a system device (metadata or logging) has shrunk below the capacity with which it was created.",
     "Corrective action": "1. Examine the back- end arrays to determine why the storage has shrunk. 2. Resize the required back-end devices to their original size. 3.Contact Dell Customer Support.",
     "Event source": "METAVOLU ME",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-38"
   },
   {
     "Condition ID": "v70-0x30018",
@@ -423,7 +461,8 @@
     "RCA": "The active meta- volume has become unhealthy and is at risk. It is in cache only, and must be written to storage volume.",
     "Corrective action": "The active meta- volume has become unhealthy. Either resolve the problem on the back end, or create another meta- volume using 'meta- volume create' as soon as possible, and then run the 'meta- volume move' command to save the cache data to the newly created meta- volume.Contact Dell Customer Support.",
     "Event source": "STORAGEV OLUME",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-39"
   },
   {
     "Condition ID": "v70-0x30019",
@@ -434,7 +473,8 @@
     "RCA": "A fixed time has passed after the local cluster last booted, and the active metadata volume has not yet been detected.",
     "Corrective action": "Fix the problem with the active metadata volume, or activate a backup if no configuratio n changes have taken place since the backup. If there have been configuratio n changes, contact Dell Customer Support to restore from the backup.",
     "Event source": "METAVOLU ME",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-40"
   },
   {
     "Condition ID": "v70-0x3001a",
@@ -445,7 +485,8 @@
     "RCA": "The average I/O latency on a storage volume has exceeded the acceptable limit, likely due to increased latency on the backend storage array or fabrics between the metro node and storage array.",
     "Corrective action": "1. Analyze the latency stats from the storage array for the volume in question at the time of the event to determine if it reported the same highlatency. Engage the storage array vendor as needed.2. If the storage array does not report the same latency at the time of the issue for the volume, then investigate the fabrics between the metro node and storage array. 3. If the issue persists and the cause cannot be determined engage Dell Customer Service.",
     "Event source": "STORAGEV OLUME",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-41"
   },
   {
     "Condition ID": "v70-0x3001b",
@@ -456,7 +497,8 @@
     "RCA": "The average I/O latency on a remote device has exceeded the acceptable limit due to possible issues on the back- end or WAN link.",
     "Corrective action": "1. Use the metro node Unisphere performanc e monitoring stats to verify if there is high average I/O latency on the WAN COM links, or high average backend I/O latency on the cluster where the remote device resides, and investigate further as needed. 2. Create storage- volume performanc e monitors in Vplexcli to investigate individual storage- volume latency stats asmust further investigate the cause of the performanc e degradation.3. Compare the storage- volume latency  stats to the latency on the storage array for the one or more volumes in question. If the latency on the array is not high, investigate the fabrics between the storage array and metro node.4. If the issue persists and the cause cannot be determined, then engage Dell Customer Service.",
     "Event source": "DISTRIBUTE DDEVICE",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-42"
   },
   {
     "Condition ID": "v70-0x3001c",
@@ -467,7 +509,8 @@
     "RCA": "All the storage volumes supporting this mirror are performing poorly, causing severe degradation in theRAID-1performance. To improve the RAID-1performanc e through the healthy legs, the IOs to the poorly performing mirror leg have been blocked.",
     "Corrective action": "Identify the cause of the poor performanc e of storage volume through seeing the troubleshoo ting entry related to degraded disks and isolated mirrors in the normal operation section of SolVe Procedure Generator (\"Recovery->Troubleshoo ting -> Problems during normal operation -> Degraded disks and isolated mirrors problems\"). If the underlying issues cannot be fixed in a timely manner, consider detaching the unhealthy mirror from the RAID-1 device and attaching a mirror based on healthy storage volumes to reinstate redundancy. Contact Dell Customer Support if the problem persists.",
     "Event source": "METAVOLU ME",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-43"
   },
   {
     "Condition ID": "v70-0x3001d",
@@ -478,7 +521,8 @@
     "RCA": "All in- memory metadata has been written out to the given metadata volume.",
     "Corrective action": "It is an informationa l event only.No action is required.",
     "Event source": "METAVOLU ME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-44"
   },
   {
     "Condition ID": "v70-0x3001e",
@@ -489,7 +533,8 @@
     "RCA": "An attempt to write out all in- memory metadata to a metadata volume failed.",
     "Corrective action": "Examine the metadata volume to see if there are any problems that can be corrected, contacting Dell Customer Service for assistance if needed.",
     "Event source": "METAVOLU ME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-45"
   },
   {
     "Condition ID": "v70-0x3001f",
@@ -500,7 +545,8 @@
     "RCA": "All in- memory metadata has been written out to the given metadata volume, which is now the active metadata volume.",
     "Corrective action": "It is an informationa l event only. No action is required.",
     "Event source": "METAVOLU ME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-46"
   },
   {
     "Condition ID": "v70-0x30020",
@@ -511,7 +557,8 @@
     "RCA": "An attempt to write out all in- memory metadata to a metadata volume failed, and therefore that metadata volume has not been activated.",
     "Corrective action": "Examine the metadata volume to see if there are any problems that can be corrected, contacting Dell Customer Service for assistance if needed.",
     "Event source": "METAVOLU ME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-47"
   },
   {
     "Condition ID": "v70-0x60001",
@@ -522,7 +569,8 @@
     "RCA": "The last director with the given cluster id has departed. It marks the loss of the indicated cluster from the point of view of the reporting cluster.",
     "Corrective action": "The last director with the given cluster ID has departed. It marks the loss of the indicated cluster from the point of view of the reporting cluster. Check that the distributed- devices and consistency-groups are running on the winning cluster. A winner must be manually chosen. 1. Check for problems with the network link to the indicated cluster. 2. Check the equipment at the indicated cluster for malfunction s.",
     "Event source": "CLUSTER",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-48"
   },
   {
     "Condition ID": "v70-0x60002",
@@ -533,7 +581,8 @@
     "RCA": "This failure exposes the cluster to a Data Unavailabilit y condition in certain director failure/ inter- director link failure scenarios.",
     "Corrective action": "Check the managemen t network cables and the correspondi ng managemen t modules.",
     "Event source": "DIRECTOR",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-49"
   },
   {
     "Condition ID": "v70-0x60003",
@@ -544,7 +593,8 @@
     "RCA": "This director tried to kill the identified director, but the call to do that is failed.",
     "Corrective action": "Contact Dell Customer Support.",
     "Event source": "DIRECTOR",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-50"
   },
   {
     "Condition ID": "v70-0x60004",
@@ -555,7 +605,8 @@
     "RCA": "A director with a different version of firmware may have been inserted into the cluster. Also a communicat ions link could have been brought up by mistake, allowing a cluster of a different version to be visible.",
     "Corrective action": "If this situation arose because a director with a different version of firmware wasinserted into the cluster and booted, then shut down that director. If the situation arose because a communicat ions link has been brought up by mistake, then take down that communicat ions link.",
     "Event source": "CLUSTER",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-51"
   },
   {
     "Condition ID": "v70-0x60005",
@@ -566,7 +617,8 @@
     "RCA": "A director from a foreign metro node cluster was unexpectedl y discovered through this cluster.",
     "Corrective action": "Contact Dell Customer Support to check if there has been a mis- configuratio n done between clusters in the environment.",
     "Event source": "CLUSTER",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-52"
   },
   {
     "Condition ID": "v70-0x90001",
@@ -577,7 +629,8 @@
     "RCA": "Host initiator has issued target reset due to slow I/O processing.",
     "Corrective action": "Check I/O processing statistics. Identify the reason for the host to issue Target Reset and resolve it. If the problem is with the host, unzone the initiator in question from the fabric to prevent potential performanc e impact to other hosts until the issue can be resolved.Contact Dell Customer Support if problem persists.",
     "Event source": "TARGETPO RT",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-53"
   },
   {
     "Condition ID": "v70-0x90002",
@@ -588,7 +641,8 @@
     "RCA": "An I/O failed to complete or be properly aborted and cleaned up.",
     "Corrective action": "Contact Dell Customer Support for assistance.",
     "Event source": "VIRTUALVO LUME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-54"
   },
   {
     "Condition ID": "v70-0x90003",
@@ -599,7 +653,8 @@
     "RCA": "A Scsi Unmap command could not be processed because of an internal firmware memory allocation failure.",
     "Corrective action": "Run the collect- diagnostics utility to collect system information to determine why an internal firmware memory allocation failure is occurred. Contact Dell Customer Support.",
     "Event source": "VIRTUALVO LUME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-55"
   },
   {
     "Condition ID": "v70-0x90004",
@@ -610,7 +665,8 @@
     "RCA": "The metro node director had insufficient memory resources to process the SCSICompare and Write Command.",
     "Corrective action": "Run collect- diagnostics utility to collect system information to determine why an internal firmware memory allocation failure is occurred.Contact Dell Customer Support.",
     "Event source": "VIRTUALVO LUME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-56"
   },
   {
     "Condition ID": "v70-0x90005",
@@ -621,7 +677,8 @@
     "RCA": "The metro node director had insufficient memory resources to process the SCSI Write Same Command.",
     "Corrective action": "Run the collect- diagnostics utility to collect system information to determine why an internal firmware memory allocation failure is occurred. Contact Dell Customer Support.",
     "Event source": "VIRTUALVO LUME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-57"
   },
   {
     "Condition ID": "v70-0x90006",
@@ -632,7 +689,8 @@
     "RCA": "The metro node director had insufficient memory resources to process the Scsi Xcopy Command.",
     "Corrective action": "Run the collect- diagnostics utility to collect system information to determine why an internal firmware memory allocation failure occurred. Contact Dell Customer Support.",
     "Event source": "VIRTUALVO LUME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-58"
   },
   {
     "Condition ID": "v70-0x90007",
@@ -643,7 +701,8 @@
     "RCA": "The attempt to start a transaction for a SCSI Compare and Write command failed as it could not be processed by the internal layers.",
     "Corrective action": "Contact Dell Customer Support.",
     "Event source": "VIRTUALVO LUME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-59"
   },
   {
     "Condition ID": "v70-0x90008",
@@ -654,7 +713,8 @@
     "RCA": "The attempt to start a transaction for a SCSI Write Same command failed as it could not be processed by the internal layers.",
     "Corrective action": "Consult the Troubleshoo ting Entry related to VAAI in metro node SolVe Desktop. If it does not resolve, contact Dell Customer Support.",
     "Event source": "VIRTUALVO LUME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-60"
   },
   {
     "Condition ID": "v70-0x90009",
@@ -665,7 +725,8 @@
     "RCA": "The host application or OS requested an invalid transfer size on a Scsi Compare and Write Command.",
     "Corrective action": "It is a host side issue. Investigate why the host application or OS is not respecting the maximum transfer size advertised by the metro node. Consult the Troubleshoo ting Entry in the VAAI section of SolVe Desktop for this event.If problem persists, contact Dell Customer Support.",
     "Event source": "VIRTUALVO LUME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-61"
   },
   {
     "Condition ID": "v70-0x9000a",
@@ -676,7 +737,8 @@
     "RCA": "The host application or OS specified an out of range Logical Block Address on a SCSICompare and Write Command.",
     "Corrective action": "It is a host side issue. Investigate why the host application or OS is not respecting the maximum size of the volume. If problem persists, contact Dell Customer Support.",
     "Event source": "VIRTUALVO LUME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-62"
   },
   {
     "Condition ID": "v70-0x9000b",
@@ -687,7 +749,8 @@
     "RCA": "SCSI Unmap command processing is rejected through metro node because the volume is not thin capable or thin  enabled.",
     "Corrective action": "Use the VPlexcli command \"virtual- volume set- thin-enabled true-v volume_na me\" to enable the thin-enabled property for th virtual volume.",
     "Event source": "VIRTUALVO LUME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-63"
   },
   {
     "Condition ID": "v70-0x9000c",
@@ -698,7 +761,8 @@
     "RCA": "SCSI xcopy command processing is disabled on metro node.",
     "Corrective action": "Use the CLI command and set the xcopy- enabled attribute for the correspondi ng storage view to true. Refer to the metro node CLI guide.",
     "Event source": "STORAGEVI EW",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-64"
   },
   {
     "Condition ID": "v70-0x9000d",
@@ -709,7 +773,8 @@
     "RCA": "Scsi Write Same command processing is disabled on metro node.",
     "Corrective action": "Use the CLI command and set the write- same-16- enabledattribute for the correspondi ng storage view to true. Refer to the metro node CLI guide.",
     "Event source": "STORAGEVI EW",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-65"
   },
   {
     "Condition ID": "v70-0x9000e",
@@ -720,7 +785,8 @@
     "RCA": "An enabled FE port has gone down as a result of FC cable pull, switch reboot or disabling switch port.",
     "Corrective action": "1. Check the FE port status in the 'ports' context of VPlexcli / clusters/ cluster-*/ directors/**/ports/ to verify if it's still in 'no-link' state. If it is, proceed to next steps.2. Check the switch and ensure it's operational, check the switch logs for errors that will indicate the root cause of the issue.3. Check the cabling and SFPs along the path, clean/ reset/ replace as needed.",
     "Event source": "TARGETPO RT",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-66"
   },
   {
     "Condition ID": "v70-0xb0001",
@@ -731,7 +797,8 @@
     "RCA": "Recovery from the failure of a single director took too long.",
     "Corrective action": "If the host application experienced a DU,confirm that all metro node volumes used by that application are in a healthy state. The applications affected will need to go through their recovery process.",
     "Event source": "SYSTEM",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-67"
   },
   {
     "Condition ID": "v70-0xb0002",
@@ -742,7 +809,8 @@
     "RCA": "Failure recovery has completed for all volumes.",
     "Corrective action": "It is an informationa l event only. No further action is required.",
     "Event source": "SYSTEM",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-68"
   },
   {
     "Condition ID": "v70-0xc0001",
@@ -753,7 +821,8 @@
     "RCA": "There are already the maximum number of instances of the given managemen t command currently running, and another one cannot be started. The previous instances of the command may be stuck,and the cause of It must be investigated.",
     "Corrective action": "Contact Dell Customer Support.",
     "Event source": "DIRECTOR",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-69"
   },
   {
     "Condition ID": "v70-0xd0001",
@@ -764,7 +833,8 @@
     "RCA": "A persisted record relating to a consistency group had a format unrecognize d by the system. The record is thus being ignored.",
     "Corrective action": "Check for any missing consistency groups, and reconstruct these as required.Contact Dell Customer Support for assistance.",
     "Event source": "DIRECTOR",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-70"
   },
   {
     "Condition ID": "v70-0xd0002",
@@ -775,7 +845,8 @@
     "RCA": "The system disallowed the automatic detach on the given consistency group, in order tpreserve consistency on the volumes in the set and avoid losing data.Cluster detach is disallowed when the cluster configured to become the winner needs data from the other cluster,and the necessary rebuild has not yet been completed.",
     "Corrective action": "If I/O must resume, then all required links should be brough up.",
     "Event source": "CONSISTEN CYGROUP",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-71"
   },
   {
     "Condition ID": "v70-0xf0001",
@@ -786,7 +857,8 @@
     "RCA": "The non- volatile file system has been corrupted and must be repaired.",
     "Corrective action": "Contact Dell Customer Support.",
     "Event source": "METAVOLU ME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-72"
   },
   {
     "Condition ID": "v70-0xf0002",
@@ -797,7 +869,8 @@
     "RCA": "The non- volatile file system is either not configured or has been corrupted.",
     "Corrective action": "The file system should be reconfigured. Contact Dell Customer Support.",
     "Event source": "METAVOLU ME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-73"
   },
   {
     "Condition ID": "v70-0xf0003",
@@ -808,7 +881,8 @@
     "RCA": "The non- volatile file system is not large enough to handle the amount of information that must be persisted.",
     "Corrective action": "Create a larger meta- volume.Contact Dell Customer Support for assistance.",
     "Event source": "METAVOLU ME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-74"
   },
   {
     "Condition ID": "v70-0xf0004",
@@ -819,7 +893,8 @@
     "RCA": "A write error occurred to the non- volatile file system and data was not written to disk.",
     "Corrective action": "Investigate why writing to the meta- volumefailed. If the failure cannot be corrected, create a new meta- volume and copy the in- memory data to the new meta- volume.Contact Dell Customer Support for assistance if necessary.",
     "Event source": "METAVOLU ME",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-75"
   },
   {
     "Condition ID": "v70-0x40001",
@@ -830,7 +905,8 @@
     "RCA": "Local directors are running different versions of software.",
     "Corrective action": "Contact Dell Customer Support.",
     "Event source": "DIRECTOR",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-76"
   },
   {
     "Condition ID": "v70-0x40002",
@@ -841,7 +917,8 @@
     "RCA": "Fewer than expected paths to remote director.",
     "Corrective action": "Check the state of the COM port, making sure it is enabled. Check the cable, making sure it is properly plugged in. Check the switch if applicable, making sure it is operational and the correspondi ng port is enabled.Contact Dell Customer Support if this event persists.",
     "Event source": "DIRECTOR",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-77"
   },
   {
     "Condition ID": "v70-0x40003",
@@ -852,7 +929,8 @@
     "RCA": "The system failed to read an internal setting. It will prevent the director from fully booting, thereby preventing it from processing I/O",
     "Corrective action": "Contact Dell Customer Support.",
     "Event source": "DIRECTOR",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-78"
   },
   {
     "Condition ID": "v70-0x120003",
@@ -863,7 +941,8 @@
     "RCA": "Acommunicat ions path has been disconnecte d due to network connectivity issues.",
     "Corrective action": "Check the WAN COM or LOCALCOM path that was disconnecte d, then check the switch logs for errors that will help pinpoint the root cause. If errors point to hardware issue check/ clean/ replace the cables and SFPs along the path.Engage Dell Customer Support if unable to determine the root cause.",
     "Event source": "COMMUNIC ATIONSPAT H",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-79"
   },
   {
     "Condition ID": "v70-0x150008",
@@ -874,7 +953,8 @@
     "RCA": "Fibre Channel port is connected to a switch, but the port isn't in any zone yet.",
     "Corrective action": "Please verify: 1. That the port is cabled correctly. 2. That the switch zoning is complete and correct. Additionally, some switches need to enable the zoning configuratio n one more time to make the just- changed zoning configuratio n apply. If unable to resolve the issue engage Dell Customer Support.",
     "Event source": "VIRTUALPO RT",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-80"
   },
   {
     "Condition ID": "v70-0x15000d",
@@ -885,7 +965,8 @@
     "RCA": "This switch is likely not compatible with metro node. Metro node is unable to register with the switch or perform fabric discovery. Because this response is non-spec- compliant, metro node is unable to report on which version ofthe spec the switch does support.",
     "Corrective action": "Check the connectivity support matrix from E-Lab Navigator to verify if the switch model and firmware is supported by Dell. If assistance is needed engage Dell Customer Support.",
     "Event source": "VIRTUALPO RT",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-81"
   },
   {
     "Condition ID": "v70-0x150010",
@@ -896,7 +977,8 @@
     "RCA": "This switch is likely not compatible with metro node. Metro node is unable to register with the switch or perform fabric discovery.",
     "Corrective action": "Check the connectivity support matrix from E-Lab Navigator to verify if the switch model and firmware is supported by Dell. If assistance is needed engage Dell Customer Support.",
     "Event source": "VIRTUALPO RT",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-82"
   },
   {
     "Condition ID": "v70-0x150011",
@@ -907,7 +989,8 @@
     "RCA": "The indicated interface has encountered an internal error and has dumped diagnostics for chip vendor analysis.",
     "Corrective action": "Contact Dell Customer Support.",
     "Event source": "INTERFACE",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-83"
   },
   {
     "Condition ID": "v70-0x150018",
@@ -918,7 +1001,8 @@
     "RCA": "It likely indicates either a physical communicat ion issue with the switch or a misbehaving switch.",
     "Corrective action": "Check the physical paths to the switch and verify good connectivity through reseat/ clean/ replacement of cables/ SFPs as needed.Check the switch logs for indications of frame drops or other problems. If unable to determine the cause engage Dell Customer Support.",
     "Event source": "VIRTUALPO RT",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-84"
   },
   {
     "Condition ID": "v70-0x150019",
@@ -929,7 +1013,8 @@
     "RCA": "An internal command on this interface has failed unexpectedl y.",
     "Corrective action": "Contact Dell Customer Support.",
     "Event source": "INTERFACE",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-85"
   },
   {
     "Condition ID": "v70-0x15001d",
@@ -940,7 +1025,8 @@
     "RCA": "The chip underlying the  specified interface (metro node port) has encountered an error condition and requires a manual reset from Dell Customer Support.",
     "Corrective action": "Contact Dell Customer Support to manually reset the chip.",
     "Event source": "INTERFACE",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-86"
   },
   {
     "Condition ID": "v70-0x15001e",
@@ -951,7 +1037,8 @@
     "RCA": "The chip hasencountered an error condition and no automated recovery is possible. The chip may now be unresponsiv e resulting in stuck IO. The chip must be manually reset by Dell Customer Support, and if that fails the director must be rebooted to recover from this issue.",
     "Corrective action": "Contact Dell Customer Support to manually reset the chip.",
     "Event source": "INTERFACE",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-87"
   },
   {
     "Condition ID": "v70-0x150001",
@@ -962,7 +1049,8 @@
     "RCA": "Fabric discovery is starting due to successful fabric login.",
     "Corrective action": "No user action is required.",
     "Event source": "VIRTUALPO RT",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-88"
   },
   {
     "Condition ID": "v70-0x15000e",
@@ -973,7 +1061,8 @@
     "RCA": "Because this response is non-spec- compliant, metro node is unable to determine which version of the spec that the switch does support.Metro node will try a protocol version that is known to work with some switches that act in this way.",
     "Corrective action": "No user action is required. Metro node is attempting to automaticall y recover from this issue. A different event will be emitted if further problems are encountered.",
     "Event source": "VIRTUALPO RT",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-89"
   },
   {
     "Condition ID": "v70-0x15000f",
@@ -984,7 +1073,8 @@
     "RCA": "Metro node will attempt to use the specified protocol version to communicate with the switch.",
     "Corrective action": "No user action is required.",
     "Event source": "VIRTUALPO RT",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-90"
   },
   {
     "Condition ID": "v70-0x70001",
@@ -995,7 +1085,8 @@
     "RCA": "This event is generated when Cluster Witness is administrati vely disabled.",
     "Corrective action": "If the Cluster Witness was disabled in error, re- enable it",
     "Event source": "CLUSTER",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-91"
   },
   {
     "Condition ID": "v70-0x70002",
@@ -1006,7 +1097,8 @@
     "RCA": "The cluster reporting this event has been unable to establish communicat ion with Cluster Witness Server. This may be due to the failure of the server or loss of network connectivity.",
     "Corrective action": "Check network connectivity between the local cluster and ClusterWitn ess Server. Check whether Cluster Witness Server VM is running. If connectivity is lost from both clusters, disable the Cluster Witness Server via metro nodeCLI until connectivity can be restored inorder to prevent data unavailabilit y on cluster partition. If the Problem persists, contact Dell EMCCustomer Support.",
     "Event source": "CLUSTER",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-92"
   },
   {
     "Condition ID": "v70-0x70003",
@@ -1017,7 +1109,8 @@
     "RCA": "Cluster Witness Server has detected and reported an inter-cluster partition.This marks the loss of connectivity between the remote cluster and the reporting cluster. This may be due to physical failure or congestion of the inter- cluster network.",
     "Corrective action": "If the Cluster Witness Server is present and enabled, it should have provided guidance to continue IO on the winning cluster. If the Cluster Witness Server is not present, check that the distributed devices and consistency groups are running on the winning cluster. If the problem persists, contact Dell EMCCustomer Support.",
     "Event source": "CLUSTER",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-93"
   },
   {
     "Condition ID": "v70-0x70004",
@@ -1028,7 +1121,8 @@
     "RCA": "Cluster Witness Server detected that the remote cluster has either failed or become isolated.This could be due to site disaster or due to dual failure of inter- cluster and managemen t networks.",
     "Corrective action": "Verify the state of the remote cluster.Also, check the state of inter-cluster network and the managemen t network connecting the remote cluster to Cluster Witness Server. If the problem persists, contact Dell EMC Customer Support.",
     "Event source": "CLUSTER",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-94"
   },
   {
     "Condition ID": "v70-0x70005",
@@ -1039,7 +1133,8 @@
     "RCA": "The cluster reporting this event has been unable to receive any guidance from the Cluster Witness Server for the last 10 seconds.This may be due to failure of the Cluster Witness Server or loss of network connectivity.",
     "Corrective action": "A winner must be manually chosen for all suspended synchronous consistency-groups using the VPlexcli command \"consistenc y-group choose- winner\" in order to resume I/O at the wanted cluster.Once this is complete, check network connectivity between the local cluster and Cluster Witness Server.Check whether Cluster Witness Server VM is running. If the problem persists, contact Dell EMCCustomer Support.",
     "Event source": "CLUSTER",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-95"
   },
   {
     "Condition ID": "v70-0x70006",
@@ -1050,7 +1145,8 @@
     "RCA": "There are no known causes for this condition. Contact Dell EMCCustomer Support for assistance.",
     "Corrective action": "Contact Dell EMCCustomer Support for assistance.",
     "Event source": "CLUSTER",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-96"
   },
   {
     "Condition ID": "v70-0x70007",
@@ -1061,7 +1157,8 @@
     "RCA": "The director reporting this event is unable to establish communicat ion with Cluster Witness Server. This may be due to the failure of the server or loss of network connectivity.",
     "Corrective action": "Check network connectivity between the director and Cluster Witness Server. Check whether Cluster Witness Server is running. If connectivity is lost from other directors, disable the Cluster Witness Server until connectivity is restored in order to prevent data unavailabilit y on cluster partition. If the problem persists, contact Dell EMCCustomer Support.",
     "Event source": "DIRECTOR",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-97"
   },
   {
     "Condition ID": "v70-0x70008",
@@ -1072,7 +1169,8 @@
     "RCA": "This event is generated when Cluster Witness is unable to send requests or receive responses from Cluster Witness server.",
     "Corrective action": "Check network connectivity or network bandwidth between the director and Cluster Witness Server.",
     "Event source": "DIRECTOR",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-98"
   },
   {
     "Condition ID": "v70-0xa0000",
@@ -1083,7 +1181,8 @@
     "RCA": "The part number of the SFP is not approved. It is required to use Dell EMCapproved SFPs.",
     "Corrective action": "Contact Dell EMCCustomer Support to replace the SFP with an approved part.",
     "Event source": "INTERFACE",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-99"
   },
   {
     "Condition ID": "v70-0xa0001",
@@ -1094,7 +1193,8 @@
     "RCA": "An SFP is missing, inserted incorrectly, or faulty.",
     "Corrective action": "Contact Dell EMCCustomer Support to check/replace the SFP.",
     "Event source": "INTERFACE",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-100"
   },
   {
     "Condition ID": "v70-0xa0002",
@@ -1105,7 +1205,8 @@
     "RCA": "A port's RX power is below the warning or alarm threshold.",
     "Corrective action": "The hardware attached to this port must be carefully investigated, and the switch port SFP and cable should be re- seated, cleaned, and swapped as needed.",
     "Event source": "INTERFACE",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-101"
   },
   {
     "Condition ID": "v70-0xa0003",
@@ -1116,7 +1217,8 @@
     "RCA": "A port's RX power is above the warning or alarm threshold.",
     "Corrective action": "The hardware attached to this port must be carefully investigated, and the switch port SFP and cable should be re- seated, cleaned, and swapped as needed.",
     "Event source": "INTERFACE",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-102"
   },
   {
     "Condition ID": "v70-0xa0004",
@@ -1127,7 +1229,8 @@
     "RCA": "A port's TX power is below the warning or alarm threshold.",
     "Corrective action": "Contact Dell EMCCustomer Support to replace the SFP.",
     "Event source": "INTERFACE",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-103"
   },
   {
     "Condition ID": "v70-0xa0005",
@@ -1138,7 +1241,8 @@
     "RCA": "A port's TX power is above the warning or alarm threshold.",
     "Corrective action": "Contact Dell EMCCustomer Support to replace the SFP.",
     "Event source": "INTERFACE",
-    "Alert type": "Alarm"
+    "Alert type": "Alarm",
+    "ID":  "v70-104"
   },
   {
     "Condition ID": "v70-0x13006f",
@@ -1149,7 +1253,8 @@
     "RCA": "A tcpcom connection header failed to pass CRC checks.",
     "Corrective action": "The system should recover automatically. However, the underlying network and hardware must be investigated to determine the source of the corrupt packet.Contact Dell EMCCustomer Support for assistance.",
     "Event source": "PORT",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-105"
   },
   {
     "Condition ID": "v70-0x1300c8",
@@ -1160,7 +1265,8 @@
     "RCA": "A tcpcom path has been indicted.",
     "Corrective action": "The system should recover automatically. However, the underlying network and hardware must be investigated to determine the cause of the error. Contact DELL EMCCustomer Support for assistance.",
     "Event source": "COMMUNIC ATIONSPAT H",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-106"
   },
   {
     "Condition ID": "v70-0x1300c9",
@@ -1171,7 +1277,8 @@
     "RCA": "A tcpcom path has been indicted due to a received packet failing a CRC check.",
     "Corrective action": "The system should recover automatically. However, the underlying network and hardware must be investigated to determine the cause of the CRC errors. Contact DELL EMCCustomer Support for assistance.",
     "Event source": "COMMUNIC ATIONSPAT H",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-107"
   },
   {
     "Condition ID": "v70-0x1300ca",
@@ -1182,7 +1289,8 @@
     "RCA": "A tcpcom path has been indicted due to a received packet having an invalid message length.",
     "Corrective action": "The system should recover automatically. However, the underlying network and hardware must be investigated to determine the cause of the invalid packets.Contact DELL EMCCustomer Support for assistance.",
     "Event source": "COMMUNIC ATIONSPAT H",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-108"
   },
   {
     "Condition ID": "v70-0x1300cb",
@@ -1193,7 +1301,8 @@
     "RCA": "A tcpcom path has been indicted due to a timeout.",
     "Corrective action": "The system should recover automatically. However, the underlying network and hardware must be investigated to determine the cause of the timeout. Contact DELL EMCCustomer Support for assistance.",
     "Event source": "COMMUNIC ATIONSPAT H",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-109"
   },
   {
     "Condition ID": "v70-0x170192",
@@ -1204,7 +1313,8 @@
     "RCA": "Either a large I/O spike has occurred, there are frame drop issues on the fabric, or there is an internal issue in the metro node.",
     "Corrective action": "Engage Dell EMCCustomer Service immediately if there is an outage or extreme performanc e issues.Check the switch logs from the fabric to determine if it is logged many frame drops, in which case further investigatio n of the fabric is needed.Switch one or more metro node ports in question  one at a time by disabling and re- enabling the port in the / clusters/ cluster-x/ directors/ director-x/ ports context of VPlexcli may relieve the issue.",
     "Event source": "VirtualPort",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-110"
   },
   {
     "Condition ID": "v70-0x170193",
@@ -1215,7 +1325,8 @@
     "RCA": "Either there are frame drop issues on the fabric or there is an internal issue in the metro node.",
     "Corrective action": "Check the physical paths to the switch and verify good connectivity through reseat/ clean/ replacement of cables/ SFPs as needed.Check the switch logs for indications of frame drops or other problems. If unable to determine the cause engage Dell EMCCustomer Service.",
     "Event source": "VirtualPort",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-111"
   },
   {
     "Condition ID": "v70-0x170194",
@@ -1226,7 +1337,8 @@
     "RCA": "This port has outstanding I/O but failed to make progress for over 60 s, likely due to an internal issue.",
     "Corrective action": "Issue extended collect- diagnostics to collect the chip dump.Engage Dell EMCCustomer Service.",
     "Event source": "VirtualPort",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-112"
   },
   {
     "Condition ID": "v70-0x1701f5",
@@ -1237,7 +1349,8 @@
     "RCA": "Either there are frame drop issues on the fabric or there is an internal issue in the metro node.",
     "Corrective action": "Check the physical paths to the switch and verify good connectivity through reseat/ clean/ replacement of cables/ SFPs as needed, including the connectivityof the metro node port. Check the switch logs for indications of frame drops or other problems. If unable to determine the cause engage Dell EMCCustomer Service.",
     "Event source": "VirtualPort",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-113"
   },
   {
     "Condition ID": "v70-0x190001",
@@ -1248,7 +1361,8 @@
     "RCA": "The storage volume returned many busy responses, and may be marked dead in metro node as a result, if the devices above have redundancy.",
     "Corrective action": "Engage array vendor in determining the cause of the returned SCSI busies. If the storage volume has been  marked dead, it is automaticall y resurrected by metro node once the array begins processing I/O for the storage volume again.",
     "Event source": "DiskId",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-114"
   },
   {
     "Condition ID": "v70-0x180001",
@@ -1259,7 +1373,8 @@
     "RCA": "Multiple successive I/Os to a given disk failed after retry exhaustion. There might be faulty hardware (cable, backend switch, array).",
     "Corrective action": "Verify reported array's BE disk health, LUNmasking, array configuratio n and physical connection. If the problem persists, contact Dell EMCCustomer Support.",
     "Event source": "DiskId",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-115"
   },
   {
     "Condition ID": "v70-0x180002",
@@ -1270,6 +1385,7 @@
     "RCA": "Multiple successive I/Os to a given disk failed after retry exhaustion. There might be faulty hardware (cable, backend switch, array).",
     "Corrective action": "Verify reported array's BE disk health, LUNmasking, array configuratio n, and physical connection. If the problem persists, contact Dell EMCCustomer Support.",
     "Event source": "DiskId",
-    "Alert type": "Operational"
+    "Alert type": "Operational",
+    "ID":  "v70-116"
   }
 ]
